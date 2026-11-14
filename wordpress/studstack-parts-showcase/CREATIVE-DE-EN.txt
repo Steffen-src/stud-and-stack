@@ -1,0 +1,51 @@
+STUDSTACK CREATIVE STUDIO — Version 1.1.0 — 31.10.2026
+
+DEUTSCH
+Zwei neue Seitenansichten im vorhandenen Shop:
+  #build     Selbst gestalten / Build Your Own
+  #discover  Bauideen entdecken / Build & Discover
+Die Hauptnavigation und mobile Reiter führen direkt dorthin. Sprache, Warenkorb und aktueller Entwurf bleiben beim Seitenwechsel erhalten.
+
+BAUWERKSTATT
+- Isometrische, skalierbare SVG-Baufläche: 12 x 12 Noppen, Ebenen 0 bis 5, maximal 120 Steine.
+- Fünf Steinformen mit sechs konsistent verfügbaren neuen Farbvarianten. Weitere Farben und gebrauchte Teile bleiben im normalen Beispielkatalog.
+- Platzieren: Form/Farbe/Ebene wählen, Rasterfeld anklicken. Ein Klick auf einen bestehenden Stein setzt an dessen Position auf der ausgewählten Ebene.
+- Auswählen & bewegen: Stein anklicken oder in der aufklappbaren Steine-Liste auswählen; Zielfeld anklicken und 'Zum Cursor verschieben' wählen. Die Auswahl kann umgefärbt, gedreht, entfernt oder um eine Ebene versetzt werden.
+- Tastatur auf der fokussierten Baufläche: Pfeiltasten bewegen den Cursor, Enter/Leertaste setzt oder verschiebt, R dreht, Entf entfernt den ausgewählten Stein.
+- Überschneidungen, Grundflächen-/Höhenbegrenzung und mindestens ein Auflagepunkt auf der darunterliegenden Ebene werden geprüft. Vor dem Entfernen/Verschieben tragender Steine müssen darüberliegende Steine entfernt werden.
+- Rückgängig/Wiederholen: bis 40 Bearbeitungsschritte pro geöffneter Sitzung. Der aktuelle Entwurf bleibt nach Neuladen erhalten, der Bearbeitungsverlauf nicht.
+- Teileliste, Mengen und Cent-genaue Preise werden aus demselben Katalog wie der Warenkorb berechnet.
+- Bausatz oder montierte Kreation: Montage standardmäßig 20 % des Teilepreises, mindestens 2,95 EUR je Kreation. Bei mehreren Exemplaren wird der Montagepreis je Exemplar berechnet. Versand zusätzlich im simulierten Checkout.
+- Bauplan als JSON exportierbar: Teileliste, Mengen, Koordinaten, Drehungen und Beispielpreise. Die Galerie ergänzt einen visuellen Schritt-für-Schritt-Bauplan pro Ebene.
+
+GALERIE
+Haus (33 Steine), Roboter (11) und abstrakter Rennwagen (11). Schwierigkeitsfilter, Beispiel-Bauzeiten, Teilepreis, visueller Ebenen-Bauplan, anpassbare Vorlage und direkte Bausatz-Übernahme. Beim Ersetzen eines Entwurfs erscheint eine Bestätigung; anschließend ist Rückgängig möglich.
+
+WARENKORB
+Eine eigene Kreation erscheint als zusammengehöriger Artikel mit eigener Vorschaugrafik und Bausatz-/Montagehinweis. Die Mengensteuerung zählt Exemplare, der Warenkorb-Zähler die enthaltenen Teile. Für die Höchstmenge werden die gemeinsamen Teilebestände aller einzelnen Teile und Kreationen berücksichtigt. Entwürfe im Warenkorb sind Momentaufnahmen; spätere Änderungen in der Werkstatt verändern bereits hinzugefügte Kreationen nicht.
+
+WORDPRESS / WIEDERVERWENDUNG
+Installierbares Gesamtpaket: STUD-STACK-WordPress.zip. Shortcode [studstack_shop] in einer Seite. Das Plugin stellt dort einen vollständigen Shop ohne Theme-Header/-Footer dar. Neue Ansichten werden als clientseitige Seiten über #build und #discover geöffnet; es sind keine separaten WordPress-Beiträge.
+Einstellungen > StudStack: Marke, Hauptakzent, Standardsprache, Montage-Mindestbetrag in Eurocent und prozentualer Aufschlag. Texte: words.en / words.de in creative.js. Vorlagen: templates(); Geometrie und Bilder: eigene SVG-Renderer in creative.js. Form-/Farbauswahl bezieht sich auf app.js.
+Ohne WordPress: index.html, style.css, creative.css, creative.js, app.js und assets gemeinsam über einen lokalen Webserver ausliefern. creative.js muss vor app.js geladen werden. Die Verbindung wird über StudStackCreative.mount() im Shop hergestellt. Keine externen Bibliotheken erforderlich.
+Separat gesichert: BAUVERIS-Effektbibliothek/wordpress/studstack-parts-showcase. Die Funktionen sind an die dokumentierte Shop-Schnittstelle gekoppelt; sie lassen sich nicht ohne diese Anbindung in beliebige fremde Warenkörbe einsetzen.
+
+GRENZEN / DATENSCHUTZ
+Eine interaktive Portfolio-Vorschau, kein echter Commerce-Dienst. Keine Bricqer-/BrickLink-/WooCommerce-Synchronisation, Bestellung, Reservierung, Montagebeauftragung, Zahlung oder E-Mail. Keine strukturelle/statische Validierung oder Garantie der realen Baubarkeit; nur vereinfachte Rasterprüfung. Der Rennwagen ist ein abstraktes Blockmodell ohne bewegliche Räder. Bauzeiten und Preise sind Beispiele.
+97 Beispiel-Lots, kein importierter Großbestand. Lokaler Speicher: studstack-builder-v1 (Entwurf/Name/Modus), studstack-showcase-v1 (Sprache/Warenkorb/Merkliste/Kreationsdefinitionen). Keine Adressdaten im lokalen Speicher. Der Download enthält nur den selbst erstellten Bauplan, keine Zugangsdaten. Produktpakete enthalten keine Browser-Speicherstände und keine festen Kundenempfänger.
+Responsive Layouts, sichtbarer Fokus, Tastatursteuerung, SVG-Seitenverhältnisse und reduzierte Bewegung berücksichtigen. Zu den tatsächlich ausgeführten Tests siehe PRUEFUNG.txt.
+
+ENGLISH
+NEW VIEWS: #build (Build Your Own) and #discover (Build & Discover), accessible through desktop navigation and mobile tabs. English/German text and cart state are shared throughout.
+
+STUDIO: 12 x 12 stud base, six layers (0–5), maximum 120 bricks. Five brick shapes with six matching new colour variants. Place with a grid click; select existing pieces to move, recolour, rotate or remove them. Arrow keys move the focused canvas cursor, Enter/Space places or moves, R rotates and Delete removes. Layer, overlap and basic support checks are included. Remove pieces above before changing a supporting brick. Undo/redo retains 40 session steps; the draft survives reloads but history does not.
+
+PRICING: Live bill of materials, integer-cent prices, kit or assembled fulfilment. Default assembly surcharge is 20% of parts with a EUR 2.95 minimum per copy. Delivery is added separately in the simulated checkout. JSON plan export includes parts, quantities, positions, rotations and sample prices. Cart lines are immutable snapshots with a rendered thumbnail, fulfilment label and assembly cost. Cart quantity controls copies; the badge counts contained pieces. Shared component stock limits include other cart lines.
+
+DISCOVER: House (33 pieces), robot (11), abstract racer (11), difficulty filters, indicative build time, layer-by-layer visual instructions, customisation and one-click kit creation. Replacing a draft requires confirmation and can be undone.
+
+INSTALL: Install STUD-STACK-WordPress.zip and place [studstack_shop] on a page. That page renders the standalone shop canvas, with hash-based views rather than separate WordPress posts. Settings > StudStack configures brand, accent, language, minimum assembly cents and percentage. Translate words.en/words.de in creative.js; adapt templates() and the original SVG renderer as needed. Static use requires both CSS files, creative.js loaded before app.js, and the assets folder. The reusable module depends on the documented StudStackCreative.mount() shop bridge; another commerce system needs its own adapter.
+
+LIMITATIONS: A local portfolio showcase, not a production commerce service. No actual payment, shipping, assembly order, email, marketplace connection or stock reservation. Geometry checks are simplified and do not certify structural stability or real-world buildability. The racer is an abstract block design without moving wheels. Prices and build times are illustrative. 97 sample lots; no large inventory import.
+
+PRIVACY: Drafts use studstack-builder-v1; cart/language/wishlist/creation snapshots use studstack-showcase-v1 in browser storage. Address details stay in memory only. No browser data or credentials are bundled in the plugin. Responsive, keyboard and reduced-motion behavior are implemented; see PRUEFUNG.txt for actual test coverage and limitations.

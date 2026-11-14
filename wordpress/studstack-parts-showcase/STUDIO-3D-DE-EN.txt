@@ -1,0 +1,45 @@
+STUD & STACK — Studio 3D — 1.2.0 — 31.10.2026
+
+DEUTSCH
+UMGESETZTE ERWEITERUNGEN
+1. Produktrenderings: eigene dreidimensionale Modelle mit gerundeten Kanten, geformten Noppen, Kunststoffmaterial, Reflexionen und Studiolicht. Sichtbare Produktgrafiken werden im Browser in 1200 x 800 Pixeln erzeugt, im Verhältnis 3:2 und mit object-fit: contain dargestellt. Auch Palette, Galerie, Baupläne und Kreations-Warenkorb verwenden diese Darstellung. Es sind 3D-Visualisierungen, keine Produktfotografien oder offiziellen CAD-Daten.
+2. Neue Startseite: fertig gebautes Eckhaus als drehbare 3D-Inszenierung, neue deutsche/englische Texte und drei klare Einstiege: Teile entdecken, selbst gestalten und Bauideen entdecken. Der Hero fängt das normale Scrollrad nicht zum Zoomen ab.
+3. Räumliche Bauwerkstatt: freie Kamera, Draufsicht, Ansichts-Reset, Zoom, Rastereinrasten und transparente Platzierungsvorschau. Grün = freie/unterstützte Position; Rot = ungültige Position mit Erklärung. Die bisherigen Geometrieprüfungen, Teilelisten, Preise und Vorschau-Checkout-Funktionen bleiben erhalten.
+
+BEDIENUNG
+- Linke Maustaste ziehen: Kamera drehen. Kurzer Klick: an der eingerasteten Position setzen oder im Auswahlmodus einen Stein auswählen.
+- Scrollrad bzw. Pinch im Baukasten: zoomen. Die sichtbaren Ansichtstasten und Zoomtasten bieten Alternativen.
+- Ein Finger: drehen, kurzer Tap: setzen/auswählen. Mehrfinger-Gesten werden gegen unbeabsichtigtes Platzieren abgegrenzt. Echtes Smartphone-/Tablet-Hardwaretesting ist noch ausstehend; die Ansichten wurden in mobilen Browsergrößen getestet.
+- Pfeiltasten: Platzierungscursor verschieben. Enter/Leertaste: setzen oder ausgewählten Stein verschieben. R: Stein drehen. Entf: ausgewählten Stein entfernen. Alt + Pfeiltasten: Kamera drehen.
+- Ebenenwahl bestimmt die Höhe der Einrastfläche. Beim Verschieben und Drehen wird die bisherige Teilebelegung geprüft.
+- 2D-/3D-Umschalter als alternative Ansicht. Bei fehlendem WebGL bleiben die ursprünglichen SVG-Darstellungen und der 2D-Baukasten verfügbar. Bei einem verlorenen Grafik-Kontext kann ein Neuladen erforderlich sein.
+
+TECHNIK / WORDPRESS
+Gesamtplugin: STUD-STACK-WordPress.zip, Shortcode [studstack_shop]. WordPress >=6.0 / PHP >=7.4; tatsächlich geprüft mit WordPress 7.1.4 und PHP 8.3. Für 3D wird ein aktueller Browser mit JavaScript-Modulen und WebGL 2 benötigt. Frontend-Dateien: studio3d.js und studio3d.css, zusätzlich zu app.js, creative.js, den bestehenden Styles und assets.
+Die drei.js-Abhängigkeit liegt vollständig lokal in vendor/three. Version 0.187.0 aus dem offiziellen npm-Paket, MIT-Lizenz beigefügt. In drei Addon-Dateien wurden ausschließlich die Importpfade auf die lokal mitgelieferte Moduldatei umgestellt. Keine CDNs, API-Schlüssel, Renderdienste oder kostenpflichtigen Schnittstellen.
+Der 3D-Teil wird als ES-Modul geladen. Er meldet seine Verfügbarkeit über studstack3d-ready und verbindet sich über refresh3D() mit der vorhandenen Shop-/Baukasten-Schnittstelle. Die Lastreihenfolge ist dadurch unkritisch. Die bisherigen SVGs bleiben die Rückfallebene.
+WordPress-Einstellungen für Marke, Akzent und Standardsprache gelten weiterhin. Deutsche/englische 3D-Texte: text.en / text.de in studio3d.js. Geometrien: bodyGeometry(), part(), makeModel(). Licht/Material/Kamera: Viewer und material(). Die Teile- und Farbdaten kommen aus dem Shop; keine Kundendaten oder festen Empfänger enthalten.
+Die Thumbnail-Auflösung ist in thumb() konfiguriert. Der Bildcache ist begrenzt. Geometrien und Materialien werden wiederverwendet; Produktbilder entstehen erst bei Annäherung an den sichtbaren Bereich. Szenen rendern bei Bedienung/Änderungen, ohne dauernde automatische Kamerafahrt. Auf kleinen Ansichten werden kleinere Schattenkarten verwendet. Manuelle 3D-Bewegungen bleiben möglich, reduzierte Bewegung unterbindet dekorative CSS-Bewegungen.
+Zur Wiederverwendung in einem anderen Warenkorb ist eine Anbindung an dessen Produkt- und Entwurfsdaten nötig; das installierbare Gesamtplugin enthält diese Verbindung bereits. Alle relativen vendor-Dateien müssen zusammenbleiben. Ein direkter file://-Aufruf ersetzt keinen lokalen Webserver.
+
+GRENZEN
+Portfolio-Demo. Kein echter Verkauf, Versand, Montageauftrag, Zahlungsweg, Bestandsabgleich oder E-Mail-Versand. Die Geometrie ist vereinfacht und bescheinigt weder Stabilität noch reale Baubarkeit oder Marken-Kompatibilität. 97 Beispiel-Lots statt eines importierten Großbestandes. Smartphone-Ansichtstests ersetzen keine Tests auf allen realen Geräten. Siehe PRUEFUNG.txt.
+
+ENGLISH
+DELIVERED
+1. Original 3D product models with softened edges, shaped studs, plastic materials, reflections and studio lighting. Visible images render locally at 1200 x 800 pixels, preserving a 3:2 aspect ratio. Palette, gallery, build plans and creation cart previews share the same treatment. These are 3D illustrations, not photographs or official CAD assets.
+2. Redesigned home with a completed, rotatable corner house, English/German copy and three clear paths into parts, creation and inspiration. The hero does not capture the normal mouse wheel for zooming.
+3. Orbitable studio with camera controls, top view, reset, zoom, grid snapping and a translucent placement preview. Green indicates an available supported position; red explains an invalid placement. Existing geometry checks, pricing, bill of materials and simulated checkout remain in place.
+
+CONTROLS
+Drag to orbit; short click/tap to place or select. Wheel/pinch zooms inside the studio. Multiple pointers are distinguished from placement taps. Real mobile hardware testing is outstanding; mobile-size viewports were checked. Arrow keys move the placement cursor, Enter/Space places or moves, R rotates, Delete removes, Alt + arrows orbits the camera. Select the intended layer before building upwards. A persistent 2D/3D toggle is provided; SVG/2D is the fallback without WebGL. A lost graphics context may require a reload.
+
+INSTALLATION / REUSE
+Install the complete WordPress ZIP and use [studstack_shop]. WordPress >=6.0 / PHP >=7.4; tested on WordPress 7.1.4/PHP 8.3. 3D requires a current ES-module/WebGL 2 browser. Files studio3d.js/studio3d.css integrate with the existing shop and creative scripts. Three.js 0.187.0 is bundled locally with its MIT license; three addon imports were changed to local relative paths only. No CDN, API key, external renderer or recurring service is needed.
+The studstack3d-ready event and refresh3D() bridge connect the optional renderer to the shop. Keep vendor files together. Adapt text.en/text.de, bodyGeometry()/part()/makeModel(), Viewer lighting and materials as required. Brand/accent/language settings remain available. Another commerce system needs its own data adapter; the full plugin already includes the StudStack adapter.
+Geometry/material reuse, a bounded image cache, near-viewport image rendering, lower mobile shadow-map sizes and demand-driven scene updates limit rendering work. No continuous auto-orbit loop runs. A web server is required; file:// is not equivalent.
+
+LIMITATIONS
+Portfolio showcase only: no real payment, order, shipping, assembly, email or inventory integration. Simplified models and grid checks do not certify structural stability, physical buildability or brand compatibility. 97 sample lots, no large stock import. Browser viewport tests are not physical-device certification. See PRUEFUNG.txt for evidence and untested combinations.
+
+1.2.0 Leistungsdetail / Performance detail: Wiederkehrende Körper und Noppen werden pro Geometrie/Material als Instanzen gebündelt; Auswahl bleibt über Instanz-IDs möglich. Selected pieces receive a blue outline. Identical bodies/studs are batched by geometry/material to reduce draw calls.

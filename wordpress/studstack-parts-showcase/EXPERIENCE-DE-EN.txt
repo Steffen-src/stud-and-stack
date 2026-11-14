@@ -1,0 +1,40 @@
+STUD & STACK — Portfolio Experience 1.3.0 — 31.10.2026
+
+DEUTSCH
+4. PRODUKTDETAILS
+Große drehbare 3D-Ansicht mit Perspektive, Front-, Seiten- und Draufsicht. Die Großansicht vergrößert den Dialog innerhalb des Browsers. Farbe und Zustand beziehen sich auf tatsächlich vorhandene Beispielvarianten; fehlende Kombinationen bleiben deaktiviert. Maße werden als Noppen-Grundfläche und relative Steinhöhe angezeigt, nicht als offizielle Millimeterangaben. Der Kamerawinkel bleibt beim Farbwechsel desselben Teils erhalten. SVG/PNG bleibt die Rückfallebene bei fehlender 3D-Unterstützung.
+
+5. BAUIDEEN UND ENTWÜRFE
+Sechs Vorlagen: Eckhaus (33), Roboter (11), abstrakter Rennwagen (11), Turm (20), Brücke (11), Mini-Blüte (11 Teile). Jede besitzt Teileliste, Beispielpreis, Schwierigkeitsgrad, visuelle Bauanleitung pro Ebene und Übergabe in den Baukasten/Warenkorb. Bauzeiten und Preise sind Beispiele.
+Über 'Entwurf speichern' können bis zu zwölf benannte Momentaufnahmen in diesem Browser gesichert werden. 'Meine gespeicherten Entwürfe' öffnet Vorschauen zum Laden oder Löschen. Ersetzen/Löschen benötigt eine Bestätigung im Dialog; das Laden ist über Rückgängig widerrufbar. Löschen einer gespeicherten Momentaufnahme entfernt nicht die aktuelle Baufläche. Der automatisch fortgeschriebene aktuelle Entwurf bleibt zusätzlich bestehen.
+Keine Konten oder Cloud-Synchronisierung. Browserdaten löschen oder ein anderes Gerät verwenden bedeutet, dass gespeicherte Entwürfe dort nicht mehr verfügbar sind. Der bisherige JSON-Bauplanexport bleibt vorhanden.
+
+6. EINKAUFSKOMFORT
+Der Warenkorb öffnet seitlich als nativer Dialog, auf kleinen Bildschirmen über die volle Breite. Escape/Schließen und bestehende Mengen-/Checkout-Funktionen bleiben erhalten.
+'Zuletzt entdeckt' zeigt bis zu sechs kürzlich geöffnete Beispielvarianten. Der Verlauf lässt sich leeren. Er ist keine Bestseller- oder Bewertungsstatistik.
+'Fehlende Teile prüfen' vergleicht die gewünschte Kreation mit den Teilen im aktuellen Warenkorb. Teile in vorhandenen Kreationspaketen werden mitgezählt. Es wird nicht mit dem persönlichen Teilebesitz oder einem Kundenkonto verglichen. Die Ansicht zeigt benötigte, vorhandene und fehlende Mengen sowie den Zusatzpreis. Nur fehlende Teile werden als Einzelteile ergänzt. Eine vollständige Verfügbarkeitsprüfung erfolgt vor dem Einfügen, um Teil-Übernahmen bei unzureichendem Beispielbestand zu vermeiden.
+
+7. ANIMATIONEN
+Einmaliger Aufbau der Startseiten-Kreation beim ersten sichtbaren Einstieg, kurzer Einsetz-Effekt für neue Steine, weiche Produktansicht-Wechsel, Karten-Einblendungen und Warenkorb-Rückmeldung mit kurzer Teilebewegung. Keine dauernde automatische Kamerafahrt. prefers-reduced-motion deaktiviert die dekorativen Effekte; manuelle Kamerasteuerung bleibt nutzbar.
+
+WORDPRESS / WIEDERVERWENDUNG
+Installierbares Gesamtpaket: STUD-STACK-WordPress.zip. Neue Dateien experience.js und experience.css gehören neben app.js/creative.js/studio3d.js und die bisherigen Dateien. experience.js wird vor creative.js/app.js geladen; die Schnittstelle wird durch StudStackExperience.mount() verbunden. Die native WordPress-Seite verwendet weiterhin [studstack_shop]. Versionierte Asset-URLs gehören zum Plugin.
+Texte: words.en / words.de in experience.js; neue Galerie-Texte und Modelle in creative.js. Die 3D-Produktkamera und Aufbauanimationen liegen in studio3d.js. Farben/Layout in experience.css sowie dem bestehenden Designsystem. Marke, Hauptakzent, Standardsprache und Montagegebühr bleiben konfigurierbar.
+Lokale Speicher zusätzlich: studstack-designs-v1 (bis zu zwölf Entwürfe), studstack-recent-v1 (bis zu sechs Produktkennungen). Gespeicherte Browserdaten, Adressen, Kundendaten oder Schlüssel werden nicht in die Vorlagen-ZIPs übernommen. Namen aus den Vorschaufeldern werden nur auf diesem Gerät verwendet. Es gibt keine neue Server-Datenbank, Zahlung, Bestellung, Synchronisierung oder E-Mail.
+Zur Anbindung an einen anderen Shop müssen Produkt-, Warenkorb- und Entwurfs-Schnittstellen angepasst werden. Das Gesamtplugin enthält die passende StudStack-Anbindung bereits. Siehe PRUEFUNG.txt für tatsächlich ausgeführte Tests.
+
+ENGLISH
+4. PRODUCT DETAILS
+Large orbitable 3D product views, perspective/front/side/top presets, enlarged in-browser dialog, clear colour/condition controls and approximate stud footprint/relative height. Only existing sample variants are selectable; unavailable combinations are disabled. The camera angle is retained for colour changes of the same part. Dimensions are not official technical specifications. SVG/PNG remains the fallback.
+
+5. IDEAS AND SAVED DESIGNS
+Six templates: house 33, robot 11, abstract racer 11, tower 20, bridge 11, mini bloom 11 pieces. Each includes a layer-based visual plan, bill of materials, illustrative time/price, customisation and cart hand-off. Save up to twelve named snapshots locally; load/delete through confirmation dialogs. Loading can be undone; deleting a snapshot does not clear the current canvas. Autosave and JSON export remain available. No account/cloud sync; browser storage removal or switching devices does not transfer designs.
+
+6. SHOPPING COMFORT
+Side-opening native cart dialog, full width on small screens; existing quantity and simulated checkout remain. Recently explored lists up to six viewed variants and can be cleared. It is not a popularity or review claim. Missing-parts comparison credits all components already in the current bag, including kits, not personal ownership. It displays required/in-bag/missing counts and additional price. Only missing individual pieces are added, after checking availability for the complete addition.
+
+7. MOTION
+A one-time hero assembly when first visible, short new-piece insertion, soft product changes, card reveals and add-to-bag feedback. No continuous auto-orbit loop. Decorative motion respects prefers-reduced-motion; deliberate manual camera interaction remains available.
+
+REUSE / PRIVACY
+Use the full WordPress ZIP and [studstack_shop]. Keep experience.js/experience.css with the existing files; experience.js loads before the shop/creative scripts and connects through StudStackExperience.mount(). Adapt bilingual dictionaries, templates and CSS as needed. Another commerce system requires its own adapter. Browser-only keys studstack-designs-v1 and studstack-recent-v1 supplement the existing local cart/draft storage. No saved user state, credentials, customer addresses or fixed recipients are bundled. No real checkout or new remote service has been introduced. See PRUEFUNG.txt for test evidence and limitations.

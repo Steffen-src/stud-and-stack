@@ -1,0 +1,1125 @@
+.ss-app [hidden] {
+  display: none !important;
+}
+.ss-app .navlinks .cs-active {
+  box-shadow: 0 3px 0 var(--ink);
+}
+.ss-app .cs-mobile-nav {
+  display: none;
+}
+.ss-app .cs-hero {
+  background: #edf0f8;
+  overflow: hidden;
+}
+.ss-app .cs-hero > .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 480px;
+  gap: 24px;
+}
+.ss-app .cs-hero h1 {
+  font-size: clamp(40px, 4.3vw, 65px);
+  margin: 24px 0;
+}
+.ss-app .cs-hero h1 span {
+  display: block;
+  color: var(--blue);
+}
+.ss-app .cs-hero p,
+.ss-app .cs-gallery-hero p {
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.ss-app .cs-hero-art {
+  position: relative;
+  transform: rotate(-4deg);
+}
+.ss-app .cs-hero-art svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 25px 20px #1e334014);
+}
+.ss-app .cs-sticker {
+  position: absolute;
+  right: 7%;
+  top: 15%;
+  border-radius: 50%;
+  background: var(--yellow);
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  transform: rotate(8deg);
+}
+.ss-app .cs-sticker small {
+  font-size: 11px;
+  font-weight: 600;
+}
+.ss-app .cs-workspace {
+  padding-top: 65px;
+  padding-bottom: 55px;
+}
+.ss-app .cs-workhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+.ss-app .cs-workhead .eyebrow {
+  margin-bottom: 12px;
+}
+.ss-app .cs-count {
+  background: #f1f3f5;
+  border: 1px solid var(--line);
+  padding: 10px 16px;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.ss-app .cs-intro {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 28px;
+  max-width: 650px;
+}
+.ss-app .cs-editor {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) 275px;
+  gap: 20px;
+  align-items: start;
+}
+.ss-app .cs-palette,
+.ss-app .cs-order {
+  padding: 21px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.ss-app .cs-palette h3,
+.ss-app .cs-order h3 {
+  font-size: 13px;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+.ss-app .cs-palette h3:not(:first-child) {
+  margin-top: 25px;
+}
+.ss-app .cs-shapes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+.ss-app .cs-shapes button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f6f7f9;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 0 5px 7px;
+  transition:
+    transform 0.18s,
+    border-color 0.18s;
+}
+.ss-app .cs-shapes button:hover {
+  transform: translateY(-2px);
+}
+.ss-app .cs-shapes img {
+  width: 76px;
+  height: 48px;
+  object-fit: contain;
+}
+.ss-app .cs-shapes button[aria-pressed="true"] {
+  border: 2px solid var(--ink);
+  background: #fff6b8;
+}
+.ss-app .cs-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.ss-app .cs-variants button {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 7px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+  min-width: 48px;
+  border-radius: 8px;
+}
+.ss-app .cs-variants button[aria-pressed="true"] {
+  border: 2px solid var(--ink);
+  background: #f4f5f6;
+}
+.ss-app .cs-variants i {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #0002;
+}
+.ss-app .cs-variants small {
+  font-size: 9px;
+}
+.ss-app .cs-variants em {
+  font-size: 8px;
+  font-style: normal;
+  color: var(--muted);
+}
+.ss-app .cs-muted {
+  font-size: 10px;
+  line-height: 1.65;
+  color: var(--muted);
+  display: block;
+}
+.ss-app .cs-layer-label {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ss-app .cs-layer-label select {
+  max-width: 110px;
+  padding: 10px 5px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.ss-app .cs-rotate {
+  width: 100%;
+  padding: 10px 7px;
+  min-height: 40px;
+  font-size: 10px;
+  margin-top: 12px;
+  justify-content: space-between;
+}
+.ss-app .cs-board-wrap {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f4f6f8;
+}
+.ss-app .cs-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid var(--line);
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.ss-app .cs-toolbar button {
+  background: white;
+  border: 0;
+  border-radius: 6px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 6px 9px;
+  font-size: 12px;
+}
+.ss-app .cs-toolbar button:hover {
+  background: #f0f2f4;
+}
+.ss-app .cs-segment {
+  display: flex;
+  gap: 3px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 2px;
+}
+.ss-app .cs-segment button[aria-pressed="true"] {
+  background: var(--ink);
+  color: white;
+}
+.ss-app .cs-stage {
+  position: relative;
+  overflow: hidden;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #fff, #edf1f5);
+  aspect-ratio: 1.25;
+}
+.ss-app #cs-drawing {
+  width: 100%;
+  transform-origin: center;
+  transition: transform 0.15s;
+}
+.ss-app .cs-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: manipulation;
+}
+.ss-app .cs-canvas [data-cell-x] {
+  cursor: crosshair;
+}
+.ss-app .cs-canvas [data-cell-x]:hover {
+  fill: #ffcf0044;
+}
+.ss-app .cs-canvas .cs-brick {
+  cursor: pointer;
+}
+.ss-app .cs-coordinate {
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  font-size: 10px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.ss-app .cs-zoom {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  box-shadow: 0 3px 10px #0001;
+}
+.ss-app .cs-zoom button {
+  background: transparent;
+  border: 0;
+  min-height: 36px;
+  min-width: 32px;
+  font-size: 11px;
+}
+.ss-app .cs-status {
+  font-size: 12px;
+  min-height: 38px;
+  background: #fff;
+  padding: 10px 16px;
+  border-top: 1px solid var(--line);
+}
+.ss-app .cs-key-help {
+  font-size: 10px;
+  color: var(--muted);
+  padding: 0 16px 15px;
+  background: #fff;
+  line-height: 1.65;
+}
+.ss-app .cs-selected {
+  padding: 18px 16px;
+  border-top: 1px solid var(--line);
+}
+.ss-app .cs-selected h3 {
+  font-size: 13px;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+.ss-app .cs-selected p {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.ss-app .cs-selected > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.ss-app .cs-selected button {
+  min-height: 35px;
+  padding: 6px 9px;
+  border: 1px solid #cbd1d7;
+  background: white;
+  border-radius: 5px;
+  font-size: 10px;
+}
+.ss-app .cs-order {
+  position: sticky;
+  top: 110px;
+}
+.ss-app .cs-name {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.ss-app .cs-name input {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px 10px;
+  margin-top: 9px;
+  font-size: 12px;
+  min-width: 0;
+}
+.ss-app .cs-fulfil {
+  display: flex;
+  gap: 9px;
+  padding: 13px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+.ss-app .cs-fulfil:has(input:checked) {
+  border-color: var(--ink);
+  background: #fffbe6;
+}
+.ss-app .cs-fulfil input {
+  margin: 3px 0 0;
+  accent-color: var(--ink);
+}
+.ss-app .cs-fulfil strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.ss-app .cs-fulfil small {
+  display: block;
+  margin-top: 5px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 10px;
+}
+.ss-app .cs-fulfil b {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.ss-app .cs-order > small {
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--muted);
+  display: block;
+}
+.ss-app .cs-totals {
+  margin: 20px 0 17px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.ss-app .cs-totals > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+.ss-app .cs-totals .cs-total {
+  font-size: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 13px;
+  margin-top: 13px;
+}
+.ss-app .cs-totals small {
+  font-size: 9px;
+  color: var(--muted);
+}
+.ss-app .cs-order .button {
+  font-size: 11px;
+  padding: 14px 10px;
+  min-height: 47px;
+}
+.ss-app .cs-download {
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 10px;
+  min-height: 38px;
+  width: 100%;
+  margin-top: 5px;
+}
+.ss-app .cs-order > p {
+  margin-top: 9px;
+}
+.ss-app .cs-parts {
+  margin-top: 28px;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.ss-app .cs-parts h3 {
+  font-size: 21px;
+}
+.ss-app .cs-parts .cs-workhead > span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.ss-app .cs-bill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+.ss-app .cs-bill-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  font-size: 11px;
+  min-width: 0;
+}
+.ss-app .cs-bill-line img {
+  width: 54px;
+  height: 42px;
+  object-fit: contain;
+  background: #f3f5f7;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.ss-app .cs-bill-line span {
+  flex: 1;
+  min-width: 0;
+}
+.ss-app .cs-bill-line strong,
+.ss-app .cs-bill-line small {
+  display: block;
+}
+.ss-app .cs-bill-line small {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.ss-app .cs-bill-line > b {
+  white-space: nowrap;
+}
+.ss-app .cs-parts details {
+  margin-top: 20px;
+}
+.ss-app .cs-parts summary {
+  font-size: 12px;
+  cursor: pointer;
+}
+.ss-app .cs-piece-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 15px;
+  max-height: 220px;
+  overflow: auto;
+}
+.ss-app .cs-piece-list button {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #f8f9fa;
+  font-size: 10px;
+}
+.ss-app .cs-piece-list button[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: #fff4ad;
+}
+.ss-app .cs-notice {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 20px !important;
+  max-width: 900px;
+}
+.ss-app .cs-bottom {
+  background: var(--yellow);
+  padding: 45px 0;
+}
+.ss-app .cs-bottom > .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.ss-app .cs-bottom h2 {
+  font-size: 32px;
+  margin-bottom: 13px;
+}
+.ss-app .cs-bottom p {
+  font-size: 13px;
+  max-width: 600px;
+}
+.ss-app .cs-gallery-hero {
+  padding: 75px 0 45px;
+  background: #edf0f8;
+}
+.ss-app .cs-gallery-hero h1 {
+  font-size: clamp(40px, 4.6vw, 68px);
+  margin: 25px 0;
+}
+.ss-app .cs-gallery-hero p {
+  max-width: 650px;
+}
+.ss-app .cs-gallery-filter {
+  display: flex;
+  gap: 9px;
+  margin-top: 30px;
+}
+.ss-app .cs-gallery-filter button {
+  border: 1px solid #bbc0c8;
+  background: transparent;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 12px;
+  min-height: 44px;
+}
+.ss-app .cs-gallery-filter button[aria-pressed="true"] {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+.ss-app .cs-gallery {
+  padding-top: 45px;
+  padding-bottom: 60px;
+}
+.ss-app .cs-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.ss-app .cs-project {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    transform 0.22s,
+    box-shadow 0.22s;
+  background: white;
+}
+.ss-app .cs-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px #1820300c;
+}
+.ss-app .cs-project-image {
+  position: relative;
+  border: 0;
+  background: radial-gradient(ellipse at center, #fff, #edf0f4);
+  width: 100%;
+  aspect-ratio: 1.28;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.ss-app .cs-project:nth-child(2) .cs-project-image {
+  background: #fff8d8;
+}
+.ss-app .cs-project:nth-child(3) .cs-project-image {
+  background: #e6efff;
+}
+.ss-app .cs-project-image svg {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+.ss-app .cs-project-image:hover svg {
+  transform: scale(1.07) rotate(-2deg);
+}
+.ss-app .cs-project-image > span {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.ss-app .cs-project-body {
+  padding: 26px;
+}
+.ss-app .cs-project h2 {
+  font-size: 27px;
+  margin: 15px 0;
+}
+.ss-app .cs-project p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  min-height: 65px;
+}
+.ss-app .cs-project dl {
+  margin: 22px 0;
+}
+.ss-app .cs-project dl > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin: 10px 0;
+}
+.ss-app .cs-project dt {
+  color: var(--muted);
+}
+.ss-app .cs-project dd {
+  font-weight: 800;
+  margin: 0;
+}
+.ss-app .cs-project .button {
+  font-size: 11px;
+  min-height: 46px;
+  padding: 12px 14px;
+}
+.ss-app .cs-project-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+.ss-app .cs-project-links button {
+  background: transparent;
+  border: 0;
+  font-size: 10px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  min-height: 40px;
+  padding: 0;
+}
+.ss-app .cs-plan > p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.ss-app .cs-plan-art {
+  background: #f2f5f8;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.ss-app .cs-plan-art svg {
+  width: 100%;
+  max-height: 400px;
+}
+.ss-app .cs-plan-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.ss-app .cs-plan-controls strong {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.ss-app .cs-plan-controls .button {
+  font-size: 10px;
+  padding: 10px 14px;
+  min-height: 42px;
+}
+.ss-app .cs-plan > h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.ss-app .cs-plan > .button {
+  margin-top: 25px;
+  font-size: 12px;
+}
+@media (min-width: 1500px) {
+  .ss-app .cs-editor {
+    grid-template-columns: 210px minmax(0, 1fr) 290px;
+  }
+  .ss-app .cs-stage {
+    aspect-ratio: 1.25;
+  }
+}
+@media (max-width: 1150px) {
+  .ss-app .cs-editor {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+  .ss-app .cs-order {
+    grid-column: 1/-1;
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 25px;
+  }
+  .ss-app .cs-order .cs-name {
+    grid-row: span 3;
+    margin: 0;
+  }
+  .ss-app .cs-order h3 {
+    margin: 0;
+    grid-column: 2;
+  }
+  .ss-app .cs-order .cs-fulfil {
+    grid-column: 2;
+  }
+  .ss-app .cs-order > small {
+    grid-column: 2;
+  }
+  .ss-app .cs-order .cs-totals {
+    grid-row: 4/7;
+    grid-column: 1;
+    margin: 0;
+  }
+  .ss-app .cs-order > #cs-add,
+  .ss-app .cs-order > .cs-download,
+  .ss-app .cs-order > p {
+    grid-column: 2;
+  }
+  .ss-app .cs-gallery-grid {
+    gap: 16px;
+  }
+  .ss-app .cs-project-body {
+    padding: 20px;
+  }
+  .ss-app .cs-project h2 {
+    font-size: 23px;
+  }
+  .ss-app .cs-project-links {
+    flex-direction: column;
+    gap: 0;
+  }
+  .ss-app .cs-project-links button {
+    text-align: left;
+    min-height: 30px;
+  }
+  .ss-app .cs-mobile-nav {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #0002;
+    gap: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 0 15px;
+  }
+  .ss-app .cs-mobile-nav a {
+    padding: 12px 2px;
+    border-bottom: 3px solid transparent;
+  }
+  .ss-app .cs-mobile-nav a.cs-active {
+    border-color: var(--ink);
+  }
+  .ss-app .navlinks {
+    display: none !important;
+  }
+}
+@media (max-width: 800px) {
+  .ss-app .cs-hero > .wrap {
+    grid-template-columns: 1fr 1fr;
+    min-height: 360px;
+  }
+  .ss-app .cs-hero h1 {
+    font-size: 40px;
+  }
+  .ss-app .cs-hero p {
+    font-size: 12px;
+  }
+  .ss-app .cs-sticker {
+    width: 65px;
+    height: 65px;
+    font-size: 19px;
+  }
+  .ss-app .cs-sticker small {
+    font-size: 8px;
+  }
+  .ss-app .cs-hero .eyebrow {
+    font-size: 9px;
+  }
+  .ss-app .cs-hero .textlink {
+    font-size: 12px;
+  }
+  .ss-app .cs-workspace {
+    padding-top: 40px;
+  }
+  .ss-app .cs-workspace h2 {
+    font-size: 30px;
+  }
+  .ss-app .cs-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .ss-app .cs-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .ss-app .cs-project-image {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .ss-app .cs-project p {
+    min-height: 0;
+  }
+  .ss-app .cs-project-links {
+    flex-direction: row;
+  }
+  .ss-app .cs-gallery-hero {
+    padding: 45px 0 30px;
+  }
+  .ss-app .cs-gallery-hero h1 {
+    font-size: 42px;
+  }
+  .ss-app .cs-bottom h2 {
+    font-size: 28px;
+  }
+  .ss-app .cs-bill {
+    grid-template-columns: 1fr;
+  }
+  .ss-app .cs-piece-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .ss-app .cs-hero > .wrap {
+    grid-template-columns: 1fr;
+    padding-top: 35px;
+    gap: 0;
+  }
+  .ss-app .cs-hero h1 {
+    font-size: 44px;
+    margin: 18px 0;
+  }
+  .ss-app .cs-hero p {
+    font-size: 13px;
+  }
+  .ss-app .cs-hero-art {
+    max-width: 360px;
+    margin: -15px auto -12px;
+    width: 100%;
+  }
+  .ss-app .cs-mobile-nav {
+    gap: 18px;
+    font-size: 10px;
+    justify-content: space-between;
+  }
+  .ss-app .cs-mobile-nav a {
+    padding: 10px 0;
+  }
+  .ss-app .cs-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .ss-app .cs-palette {
+    width: 100%;
+    padding: 17px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+  }
+  .ss-app .cs-palette h3 {
+    margin: 0 !important;
+    font-size: 11px;
+  }
+  .ss-app .cs-palette h3:nth-of-type(1) {
+    grid-column: 1/-1;
+  }
+  .ss-app .cs-shapes {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 12px;
+  }
+  .ss-app .cs-shapes button {
+    min-height: 64px;
+    font-size: 10px;
+  }
+  .ss-app .cs-shapes img {
+    height: 40px;
+  }
+  .ss-app .cs-palette h3:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .ss-app .cs-palette h3:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .ss-app .cs-variants {
+    grid-column: 1;
+    grid-row: 4/6;
+    flex-wrap: nowrap;
+    gap: 4px;
+    margin: 0;
+  }
+  .ss-app .cs-variants button {
+    min-width: 0;
+    padding: 6px 3px;
+  }
+  .ss-app .cs-variants small {
+    font-size: 8px;
+  }
+  .ss-app .cs-variants em {
+    font-size: 7px;
+  }
+  .ss-app .cs-palette > .cs-muted {
+    grid-column: 1/-1;
+    grid-row: 6;
+    margin-top: 4px;
+  }
+  .ss-app .cs-layer-label {
+    grid-column: 2;
+    grid-row: 4;
+    font-size: 10px;
+  }
+  .ss-app .cs-layer-label select {
+    width: 90px;
+    font-size: 10px;
+  }
+  .ss-app .cs-rotate {
+    grid-column: 2;
+    grid-row: 5;
+    margin: 0;
+    min-height: 36px;
+  }
+  .ss-app .cs-board-wrap {
+    width: 100%;
+  }
+  .ss-app .cs-stage {
+    min-height: 270px;
+  }
+  .ss-app .cs-toolbar {
+    padding: 8px;
+  }
+  .ss-app .cs-toolbar button {
+    font-size: 10px;
+    min-width: 30px;
+    padding: 5px 7px;
+  }
+  .ss-app .cs-order {
+    width: 100%;
+    display: block;
+    padding: 20px;
+  }
+  .ss-app .cs-order .cs-name {
+    margin-bottom: 22px;
+  }
+  .ss-app .cs-order h3 {
+    margin-bottom: 14px;
+  }
+  .ss-app .cs-order .cs-totals {
+    margin: 20px 0;
+  }
+  .ss-app .cs-workhead {
+    gap: 12px;
+  }
+  .ss-app .cs-count {
+    padding: 8px 11px;
+    font-size: 10px;
+  }
+  .ss-app .cs-workspace h2 {
+    font-size: 27px;
+  }
+  .ss-app .cs-workhead .eyebrow {
+    font-size: 9px;
+  }
+  .ss-app .cs-parts {
+    padding: 18px;
+  }
+  .ss-app .cs-piece-list {
+    grid-template-columns: 1fr;
+  }
+  .ss-app .cs-bottom > .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ss-app .cs-bottom {
+    padding: 30px 0;
+  }
+  .ss-app .cs-bottom .button {
+    font-size: 12px;
+  }
+  .ss-app .cs-gallery-hero h1 {
+    font-size: 40px;
+  }
+  .ss-app .cs-gallery-hero p {
+    font-size: 13px;
+  }
+  .ss-app .cs-gallery-filter {
+    gap: 6px;
+  }
+  .ss-app .cs-gallery-filter button {
+    font-size: 11px;
+    padding: 10px 13px;
+  }
+  .ss-app .cs-project {
+    display: block;
+  }
+  .ss-app .cs-project-image {
+    aspect-ratio: 1.4;
+  }
+  .ss-app .cs-project-body {
+    padding: 23px;
+  }
+  .ss-app .cs-project h2 {
+    font-size: 28px;
+  }
+  .ss-app .cs-project p {
+    font-size: 13px;
+  }
+  .ss-app .cs-plan-controls {
+    flex-wrap: wrap;
+  }
+  .ss-app .cs-plan-controls strong {
+    order: -1;
+    width: 100%;
+    text-align: center;
+  }
+  .ss-app .cs-plan-controls .button {
+    flex: 1;
+  }
+  .ss-app .cs-plan-art svg {
+    min-height: 220px;
+  }
+  .ss-app .cs-project-links button {
+    font-size: 11px;
+    min-height: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-app .cs-project,
+  .ss-app .cs-project-image svg,
+  .ss-app .cs-shapes button,
+  .ss-app #cs-drawing {
+    transition: none !important;
+  }
+}
+
+.ss-app .cs-confirm {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+.ss-app .cs-confirm .button {
+  font-size: 12px;
+}
+.ss-app .cs-variants button {
+  flex: 0 0 calc(33.333% - 4px);
+}
+@media (max-width: 560px) {
+  .ss-app .cs-variants {
+    flex-wrap: wrap;
+  }
+  .ss-app .cs-variants button {
+    flex: 0 0 calc(33.333% - 3px);
+  }
+  .ss-app .cs-variants i {
+    width: 18px;
+    height: 18px;
+  }
+  .ss-app .cs-variants em {
+    display: none;
+  }
+}
+
+.ss-app .navlinks a:first-child {
+  border-bottom: 0;
+}
+.ss-app .navlinks a {
+  box-shadow: none;
+}
+.ss-app .navlinks a.cs-active {
+  box-shadow: 0 3px 0 var(--ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-app .cs-project:hover,
+  .ss-app .cs-project-image:hover svg,
+  .ss-app .cs-shapes button:hover {
+    transform: none !important;
+  }
+}

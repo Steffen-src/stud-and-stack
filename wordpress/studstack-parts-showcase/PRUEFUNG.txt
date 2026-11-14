@@ -1,0 +1,64 @@
+STUD & STACK — Verification v1.3.0 — 31.10.2026
+- Expanded product view: 3D camera presets, large view, colour and available condition changes, disabled absent combinations, visible fallback hidden after 3D success. Camera preset persisted across colour change.
+- Recently viewed variants appeared after opening products.
+- Six gallery cards; Easy filter returned three. All three new templates passed validation and entered the cart.
+- Saved design survived reload, loaded through confirmation and preserved the 11-piece canvas. Delete confirmation removed the test snapshot without clearing the canvas.
+- Missing-parts comparison for the tower: 20 missing pieces / EUR 1.90 before adding; zero missing / EUR 0.00 after adding the required pieces.
+- Desktop cart right drawer opened at width 540. Mobile full-width drawer and product/comparison content showed no horizontal content overflow at 390x844.
+- End-to-end English preview checkout: 63 pieces, EUR 5.92 parts + EUR 4.95 shipping = EUR 10.87, preview completion confirmed no real payment/order/email.
+- Fourteen geometry/price assertions continue to pass; app.js, creative.js, studio3d.js and experience.js syntax checked. No browser JavaScript errors observed in tested paths.
+- Reduced-motion guards are implemented in CSS and JavaScript; real mobile hardware/multi-touch, other browsers, storage-quota exhaustion and every variant were not exhaustively tested.
+- Motion durations: hero under one second, new-piece insertion about 260 ms, cart feedback about 520 ms. No continuous animation loop.
+
+PREVIOUS CHECKS:
+STUD & STACK — Verification v1.2.0 — 31.10.2026
+3D UPGRADE: PASS
+- Local WordPress renders the new homepage, real 3D builder and bilingual labels.
+- Physical-material product renders confirmed at 1200 x 800 pixels / object-fit contain. Slopes, Technic and Special categories also rendered successfully.
+- Free mouse drag changed the camera without adding a piece. A short canvas click placed a piece. Direct pointer selection after geometry batching selected the correct 2 x 4 torso without changing the 11-piece count.
+- Keyboard placement: 11 > 12 pieces; supported upper-layer placement: 12 > 13; two Undo operations restored 11.
+- Grid preview displayed valid green and invalid-position explanations.
+- Camera side/top/reset controls and 2D/3D switching passed; the 2D choice survived a layer change.
+- EN/DE interface switching passed.
+- Creation cart preview confirmed as a 1200 x 800 rendered image; EUR 1.04 parts + EUR 2.95 assembly = EUR 3.99 retained.
+- Desktop 1440 x 1000 and mobile 390 x 844 showed no horizontal overflow in the tested home/studio views. Updated tablet 768 x 1024 also passed home/studio overflow checks.
+- Fourteen geometry/price assertions continue to pass; app.js/creative.js/studio3d.js syntax checks pass.
+- No JavaScript errors observed. A removed legacy shadow-map warning was corrected to the current Three.js PCFShadowMap option.
+- Actual touch pinch/multi-pointer hardware, non-Chromium browsers, low-memory devices and forced WebGL context loss have not been tested. Fallback paths and multi-pointer safeguards are implemented.
+- No new backend/payment integration. Previous checkout tests remain applicable to unchanged pricing/order logic.
+
+PREVIOUS FUNCTIONAL CHECKS (v1.1.0):
+STUD & STACK — Verification v1.1.0 — 31.10.2026
+Environment: local WordPress 7.1.4, PHP 8.3, Chromium in-app browser.
+
+PASSED / BESTANDEN
+- Syntax checks: app.js and creative.js.
+- 14 independent geometry/price assertions: support, collision, bounds, rotation footprint, height, fractional/unknown/prototype inputs, minimum/percentage/rounded fees.
+- Actual WordPress frontend loads #shop, #build and #discover with shared header/cart and English/German language switching.
+- All three gallery templates validated and added to cart: house 33 pieces, robot 11, racer 11.
+- Visual build-plan dialog, layer advancement and hand-off into the studio.
+- Studio placement, overlap rejection, unsupported-layer rejection, stacking, undo and redo.
+- Selected-piece recolouring, removal/undo, rotation and movement via keyboard.
+- Creation/cart persistence after reload and language switch.
+- Assembly example: EUR 1.04 parts + EUR 2.95 fee = EUR 3.99.
+- Mixed cart with six lines and 78 total pieces: EUR 13.86 + EUR 4.95 shipping = EUR 18.81. Full German checkout reached preview confirmation without payment or order transmission.
+- Composite-stock limit: entering 1000 copies of a robot was clamped to 42 copies based on shared stock; 462 contained pieces and EUR 167.58 displayed.
+- Downloaded build-plan JSON read and checked: expected format, 11 placements, integer-derived prices, previewOnly true. No keys or personal information.
+- Mobile 390x844 and tablet 768x1024: both creative views have no horizontal overflow. Desktop 1440x1000 also checked visually.
+- No observed browser console errors in tested paths.
+
+LIMITS / GRENZEN
+- A local portfolio showcase: no real order, payment, email, assembly or shipping integration.
+- Simplified grid geometry only; no structural/engineering certification or real-world buildability guarantee.
+- 97 sample lots. No 500,000-part import or Bricqer/WooCommerce synchronisation.
+- WordPress settings form is implemented; all possible custom values and other WordPress/PHP versions were not exhaustively exercised.
+- Safari/Firefox/Edge and assistive-technology combinations not tested. Reduced-motion CSS is present; no accessibility certification.
+- WordPress rendering is a standalone shortcode page with hash-routed views, not a theme-based multi-post catalogue.
+- Stored cart/draft data stays in this browser and is not included in packaged templates.
+
+LOCAL URLS
+http://127.0.0.1:8205/#build
+http://127.0.0.1:8205/#discover
+http://127.0.0.1:8204/#build (static)
+WordPress data: work/studstack-wordpress-v2. Plugin source: wordpress/studstack-parts-showcase.
+The WordPress launch blueprint is for initial setup, not reinstallation over an existing folder.

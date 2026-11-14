@@ -1,0 +1,3 @@
+three.js 0.187.0
+Source: official npm package https://registry.npmjs.org/three
+License: MIT (LICENSE.txt)

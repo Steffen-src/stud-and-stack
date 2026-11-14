@@ -1,0 +1,588 @@
+.ss-app .ss3d-home {
+  background: #f7f7f2;
+  overflow: hidden;
+  position: relative;
+}
+.ss-app .ss3d-home .ss3d-home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.04fr;
+  min-height: 560px;
+  gap: 35px;
+  align-items: center;
+  position: relative;
+}
+.ss-app .ss3d-home-copy {
+  padding: 45px 0;
+}
+.ss-app .ss3d-home .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+.ss-app .ss3d-home h1 {
+  font-size: clamp(52px, 5.2vw, 78px);
+  line-height: 1.01;
+  letter-spacing: -0.065em;
+  margin: 30px 0 25px;
+}
+.ss-app .ss3d-home h1 span {
+  display: block;
+  color: var(--blue);
+}
+.ss-app .ss3d-home p {
+  font-size: 15px;
+  max-width: 435px;
+  color: #5a6067;
+  line-height: 1.8;
+}
+.ss-app .ss3d-home-actions {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  margin-top: 30px;
+}
+.ss-app .ss3d-home-actions .button {
+  font-size: 12px;
+  padding: 16px 22px;
+  min-height: 50px;
+}
+.ss-app .ss3d-home-actions .textlink {
+  font-size: 11px;
+  white-space: nowrap;
+}
+.ss-app .ss3d-home-mini {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 9px;
+  margin-top: 42px;
+  letter-spacing: 0.02em;
+}
+.ss-app .ss3d-home-mini > span:first-child {
+  border: 1px solid #ccc;
+  padding: 4px 9px;
+  border-radius: 20px;
+}
+.ss-app .ss3d-home-mini b {
+  font-size: 10px;
+}
+.ss-app .ss3d-home-art {
+  height: 520px;
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+}
+.ss-app .ss3d-home-art:before {
+  content: "";
+  position: absolute;
+  inset: 28px -40px 45px -20px;
+  background: #e3e9f0;
+  border-radius: 50% 50% 35% 40%;
+  z-index: -1;
+  transform: rotate(-9deg);
+}
+.ss-app .ss3d-hero-view {
+  position: absolute;
+  inset: 15px -30px 35px -35px;
+}
+.ss-app .ss3d-hero-view canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+}
+.ss-app .ss3d-model-tag {
+  position: absolute;
+  left: 20px;
+  top: 19px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  z-index: 2;
+  max-width: 200px;
+  line-height: 1.7;
+  pointer-events: none;
+}
+.ss-app .ss3d-home-caption {
+  position: absolute;
+  left: 25px;
+  right: 15px;
+  bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  gap: 15px;
+  background: #fffdf7e8;
+  backdrop-filter: blur(8px);
+  border: 1px solid #ffffffd9;
+  border-radius: 8px;
+  padding: 13px 15px;
+  box-shadow: 0 12px 30px #13263d10;
+}
+.ss-app .ss3d-home-caption button {
+  border: 1px solid #d5d9de;
+  border-radius: 50%;
+  background: white;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  font-size: 19px;
+}
+.ss-app .ss3d-home-art > small {
+  position: absolute;
+  bottom: 2px;
+  left: 25px;
+  font-size: 9px;
+  color: var(--muted);
+}
+.ss-app .ss3d-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 25px;
+  padding-bottom: 27px;
+}
+.ss-app .ss3d-entry {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #f1f4f8;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  min-height: 178px;
+  padding: 23px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.ss-app .ss3d-entry:nth-child(2) {
+  background: #fff5c4;
+  border-color: #f3e6a2;
+}
+.ss-app .ss3d-entry:nth-child(3) {
+  background: #e9f2e9;
+  border-color: #d7e3d7;
+}
+.ss-app .ss3d-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px #1723350a;
+}
+.ss-app .ss3d-entry > div {
+  position: relative;
+  z-index: 1;
+  max-width: 75%;
+}
+.ss-app .ss3d-entry > div > span {
+  font-size: 9px;
+  font-weight: 800;
+  color: #68747e;
+}
+.ss-app .ss3d-entry h2 {
+  font-size: 21px;
+  max-width: 200px;
+  line-height: 1.12;
+  margin: 12px 0 10px;
+}
+.ss-app .ss3d-entry p {
+  font-size: 10px;
+  line-height: 1.6;
+  max-width: 185px;
+  color: var(--muted);
+}
+.ss-app .ss3d-entry b {
+  font-size: 10px;
+  display: block;
+  margin-top: 15px;
+}
+.ss-app .ss3d-entry img {
+  position: absolute;
+  width: 145px;
+  height: 100px;
+  right: -25px;
+  bottom: 8px;
+  transform: rotate(-12deg);
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+.ss-app .ss3d-entry:hover img {
+  transform: rotate(-5deg) translateY(-3px);
+}
+.ss-app .ss3d-rendered {
+  image-rendering: auto;
+}
+.ss-app .cs-project-image > img,
+.ss-app .cs-hero-art > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+.ss-app .cs-project-image:hover > img {
+  transform: scale(1.06) rotate(-2deg);
+}
+.ss-app .cs-plan-art > img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+.ss-app .ss3d-builder-view {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #f9faf9, #e5eaf0);
+}
+.ss-app .ss3d-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  outline-offset: -4px !important;
+}
+.ss-app .cs-stage {
+  aspect-ratio: 1.05;
+  min-height: 370px;
+}
+.ss-app .ss3d-view-tools {
+  position: absolute;
+  left: 12px;
+  top: 42px;
+  display: flex;
+  gap: 3px;
+  background: #fffffff0;
+  border: 1px solid #d6dde3;
+  border-radius: 7px;
+  padding: 3px;
+  z-index: 4;
+  box-shadow: 0 4px 12px #1730440a;
+}
+.ss-app .ss3d-view-tools button {
+  border: 0;
+  background: transparent;
+  border-radius: 5px;
+  min-width: 30px;
+  min-height: 32px;
+  font-size: 14px;
+  padding: 4px 7px;
+}
+.ss-app .ss3d-view-tools button:hover {
+  background: #edf0f3;
+}
+.ss-app .ss3d-view-tools button:last-child {
+  font-size: 9px;
+  border-left: 1px solid #d6dde3;
+  border-radius: 0;
+}
+.ss-app .ss3d-preview {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  background: #ffffffed;
+  border: 1px solid #d3e7de;
+  border-radius: 6px;
+  font-size: 9px;
+  pointer-events: none;
+  z-index: 3;
+  color: #246d51;
+}
+.ss-app .ss3d-preview i {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: #268c63;
+  border-radius: 50%;
+}
+.ss-app .ss3d-preview.invalid {
+  color: #a94332;
+  border-color: #e9c9c2;
+}
+.ss-app .ss3d-preview.invalid i {
+  background: #c44b35;
+}
+.ss-app .ss3d-preview.is-hidden {
+  display: none;
+}
+.ss-app .cs-zoom {
+  bottom: 52px;
+  z-index: 4;
+}
+.ss-app .cs-coordinate {
+  z-index: 4;
+  background: #fff9;
+  padding: 4px 7px;
+  border-radius: 4px;
+  top: 10px;
+  left: 12px;
+}
+.ss-app .ss3d-fallback .ss3d-hero-view > svg {
+  width: 100%;
+  height: 100%;
+}
+.ss-app .ss3d-lost canvas {
+  opacity: 0.15;
+}
+.ss-app .cs-canvas[hidden] {
+  display: none;
+}
+@media (max-width: 1150px) {
+  .ss-app .ss3d-home .ss3d-home-grid {
+    gap: 15px;
+    min-height: 480px;
+  }
+  .ss-app .ss3d-home h1 {
+    font-size: 60px;
+  }
+  .ss-app .ss3d-home-art {
+    height: 440px;
+  }
+  .ss-app .ss3d-entry {
+    padding: 20px;
+    min-height: 175px;
+  }
+  .ss-app .ss3d-entry h2 {
+    font-size: 19px;
+  }
+  .ss-app .ss3d-home-mini {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .ss-app .ss3d-home-mini > span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .ss-app .ss3d-home h1 {
+    font-size: 48px;
+  }
+  .ss-app .ss3d-home p {
+    font-size: 12px;
+  }
+  .ss-app .ss3d-home .eyebrow {
+    font-size: 8px;
+  }
+  .ss-app .ss3d-home .ss3d-home-grid {
+    gap: 0;
+    min-height: 400px;
+  }
+  .ss-app .ss3d-home-art {
+    height: 370px;
+  }
+  .ss-app .ss3d-home-actions {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .ss-app .ss3d-home-actions .button {
+    font-size: 11px;
+  }
+  .ss-app .ss3d-model-tag {
+    font-size: 7px;
+    left: 10px;
+    max-width: 150px;
+  }
+  .ss-app .ss3d-home-caption {
+    left: 0;
+    right: 0;
+    font-size: 8px;
+    padding: 10px;
+  }
+  .ss-app .ss3d-home-art > small {
+    font-size: 7px;
+    left: 0;
+  }
+  .ss-app .ss3d-entry-grid {
+    gap: 10px;
+  }
+  .ss-app .ss3d-entry {
+    padding: 15px;
+    min-height: 200px;
+  }
+  .ss-app .ss3d-entry h2 {
+    font-size: 18px;
+  }
+  .ss-app .ss3d-entry p {
+    font-size: 9px;
+  }
+  .ss-app .ss3d-entry img {
+    width: 95px;
+    right: -20px;
+    bottom: -12px;
+  }
+  .ss-app .ss3d-entry > div {
+    max-width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .ss-app .ss3d-home .ss3d-home-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .ss-app .ss3d-home-copy {
+    padding: 32px 0 0;
+  }
+  .ss-app .ss3d-home h1 {
+    font-size: 54px;
+    margin: 22px 0 20px;
+  }
+  .ss-app .ss3d-home p {
+    font-size: 13px;
+    max-width: 330px;
+  }
+  .ss-app .ss3d-home .eyebrow {
+    font-size: 8px;
+  }
+  .ss-app .ss3d-home-actions {
+    margin-top: 22px;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .ss-app .ss3d-home-actions .button {
+    font-size: 11px;
+    padding: 14px 17px;
+  }
+  .ss-app .ss3d-home-actions .textlink {
+    font-size: 10px;
+  }
+  .ss-app .ss3d-home-mini {
+    display: none;
+  }
+  .ss-app .ss3d-home-art {
+    height: 340px;
+    margin-top: 16px;
+  }
+  .ss-app .ss3d-home-art:before {
+    inset: 10px -20px 40px;
+  }
+  .ss-app .ss3d-hero-view {
+    inset: -10px -20px 20px;
+  }
+  .ss-app .ss3d-model-tag {
+    top: 15px;
+    left: 4px;
+    max-width: 160px;
+    font-size: 7px;
+  }
+  .ss-app .ss3d-home-caption {
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    padding: 9px 12px;
+    font-size: 9px;
+  }
+  .ss-app .ss3d-home-art > small {
+    bottom: 5px;
+    left: 3px;
+    font-size: 8px;
+  }
+  .ss-app .ss3d-entry-grid {
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    gap: 10px;
+  }
+  .ss-app .ss3d-entry {
+    min-height: 132px;
+    padding: 18px;
+  }
+  .ss-app .ss3d-entry h2 {
+    font-size: 21px;
+    max-width: 220px;
+    margin: 7px 0;
+  }
+  .ss-app .ss3d-entry > div {
+    max-width: 75%;
+  }
+  .ss-app .ss3d-entry p {
+    font-size: 10px;
+    max-width: 210px;
+  }
+  .ss-app .ss3d-entry b {
+    margin-top: 9px;
+  }
+  .ss-app .ss3d-entry img {
+    width: 145px;
+    height: 100px;
+    right: -18px;
+    bottom: 4px;
+  }
+  .ss-app .cs-stage {
+    min-height: 345px;
+    aspect-ratio: 1;
+  }
+  .ss-app .ss3d-view-tools {
+    left: 9px;
+    top: 38px;
+  }
+  .ss-app .ss3d-view-tools button {
+    min-height: 33px;
+    min-width: 30px;
+  }
+  .ss-app .ss3d-preview {
+    font-size: 8px;
+    padding: 8px;
+    left: 9px;
+    right: 9px;
+  }
+  .ss-app .cs-zoom {
+    bottom: 48px;
+    right: 9px;
+  }
+  .ss-app .cs-coordinate {
+    font-size: 9px;
+  }
+  .ss-app .cs-project-image > img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-app .ss3d-entry,
+  .ss-app .ss3d-entry img,
+  .ss-app .cs-project-image > img {
+    transition: none !important;
+  }
+  .ss-app .ss3d-entry:hover,
+  .ss-app .ss3d-entry:hover img,
+  .ss-app .cs-project-image:hover > img {
+    transform: none !important;
+  }
+}
+
+.ss-app .ss3d-view-tools[data-mode="2d"] button:not(:last-child) {
+  display: none;
+}
+
+.ss-app .ss3d-unavailable-message {
+  padding: 12px 16px;
+  background: #fff8da;
+  font-size: 11px;
+  line-height: 1.7;
+  border-top: 1px solid #e6dcae;
+}
+
+.ss-app .ss3d-canvas:focus-visible,
+.ss-app .cs-canvas:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: -4px;
+}
+@media (max-width: 560px) {
+  .ss-app .ss3d-view-tools button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .ss-app .cs-zoom button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .ss-app .ss3d-home-caption button {
+    width: 40px;
+    height: 40px;
+  }
+}
